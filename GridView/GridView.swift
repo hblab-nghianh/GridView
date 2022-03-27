@@ -180,7 +180,7 @@ open class GridView: UIScrollView {
                 super.scrollIndicatorInsets = inset + originScrollIndicatorInsets
             }
             
-            stopScroll()
+            //stopScroll()
             
             columnRow.removeAll()
             currentInfo = ViewVisibleInfo()
@@ -324,7 +324,7 @@ open class GridView: UIScrollView {
         }
     }
     
-    private func stopScroll() {
+    public func stopScroll() {
         performWithoutDelegation {
             super.setContentOffset(contentOffset, animated: false)
         }
